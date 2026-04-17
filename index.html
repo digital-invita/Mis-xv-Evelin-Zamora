@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis XV Evelin Zamora</title>
+  <title>Mis XV Sofia Montes</title>
 
   <meta name="description" content="Acompáñanos a celebrar este día tan especial.">
-  <meta property="og:title" content="Mis XV Evelin-Zamora">
+  <meta property="og:title" content="Mis XV Sofia Montes">
   <meta property="og:description" content="Acompáñanos a celebrar este día tan especial">
-  <meta property="og:image" content="https://mis-xv-Evelin-Zamora.digitalinvita.com.mx/portada-og.jpg">
-  <meta property="og:url" content="https://mis-xv-Evelin-Zamora.digitalinvita.com.mx/">
+  <meta property="og:image" content="https://xv-sofia-montes.digitalinvita.com.mx/portada-og.jpg">
+  <meta property="og:url" content="https://xv-sofia-montes.digitalinvita.com.mx/">
   <meta property="og:type" content="website">
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=20">
@@ -2632,7 +2632,27 @@
 
     <div class="separator"></div>
 
-    
+    <section class="section" id="gallerySection">
+      <h2>Galería</h2>
+      <div class="gallery-showcase">
+        <div class="gallery-stage" id="galleryStage">
+          <img src="G1.jpg" alt="Galería destacada" id="galleryPreviewImg" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery-controls">
+          <div class="gallery-meta">
+            <strong id="galleryMetaIndex">Foto 1 de 6</strong>
+            <span id="galleryMetaHint">Toca una imagen para destacar o abrir.</span>
+          </div>
+          <div class="gallery-nav">
+            <button type="button" id="galleryPrev" aria-label="Foto anterior">‹</button>
+            <button type="button" id="galleryNext" aria-label="Foto siguiente">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery" id="galleryGrid"></div>
+    </section>
+
+    <div class="separator"></div>
 
     <section class="section" id="dressSection">
       <h2 id="dressTitle">Dress Code</h2>
@@ -4315,7 +4335,12 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-
+    galleryGrid.addEventListener("mouseover", (event) => {
+      const image = event.target.closest("img");
+      if (!image) return;
+      const index = galleryImages.indexOf(image);
+      if (index >= 0) updateGalleryPreview(index);
+    });
 
     galleryGrid.addEventListener("click", (event) => {
       const image = event.target.closest("img");
