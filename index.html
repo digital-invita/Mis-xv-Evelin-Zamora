@@ -4315,12 +4315,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    galleryGrid.addEventListener("mouseover", (event) => {
-      const image = event.target.closest("img");
-      if (!image) return;
-      const index = galleryImages.indexOf(image);
-      if (index >= 0) updateGalleryPreview(index);
-    });
+
 
     galleryGrid.addEventListener("click", (event) => {
       const image = event.target.closest("img");
