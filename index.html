@@ -2924,8 +2924,8 @@
     ================================ */
     const INVITATION_CONFIG = {
       meta: {
-        pageTitle: "XV Evelin Zamora",
-        ogTitle: "XV Evelin Zamora",
+        pageTitle: "Mis XV Evelin Zamora",
+        ogTitle: "Mis XV Evelin Zamora",
         ogDescription: "Acompáñanos a celebrar este día tan especial"
       },
       event: {
@@ -4119,6 +4119,8 @@
     function sendConfirmation(attending) {
       const name = guestName.value.trim();
       const count = guestCount.value;
+      const celebrationText = `los XV de ${INVITATION_CONFIG.event.celebrantName}`;
+      const eventHeader = `${INVITATION_CONFIG.event.label} de ${INVITATION_CONFIG.event.celebrantName}`;
 
       if (!name) {
         showToast("Por favor escribe tu nombre.");
@@ -4138,7 +4140,7 @@
         message = [
           "✨ Confirmación de asistencia ✨",
           "",
-          `Con mucha alegría confirmo mi presencia en los ${INVITATION_CONFIG.event.label} de ${INVITATION_CONFIG.event.celebrantName}.`,
+          `Con mucha alegría confirmo mi presencia para celebrar ${celebrationText}.`,
           "",
           `Nombre: ${name}`,
           ...(INVITATION_CONFIG.rsvp.showGuestCount !== false ? [count] : []),
@@ -4147,7 +4149,7 @@
         ].join("\n");
       } else {
         message = [
-          `✨ ${INVITATION_CONFIG.event.label} ${INVITATION_CONFIG.event.celebrantName} ✨`,
+         `✨ ${eventHeader} ✨`,
           "",
           `Hola, mi nombre es ${name}.`,
           "",
