@@ -4200,49 +4200,30 @@ background:
       heroImage.style.transform = `scale(1.03) translate3d(0, ${progress * -18}px, 0)`;
     }
 
-    function addToCalendar(event) {
-      event.preventDefault();
+   function addToCalendar(event) {
+  event.preventDefault();
 
-      const title = `${INVITATION_CONFIG.event.label} ${INVITATION_CONFIG.event.celebrantName}`;
-      const details = `Acompáñame a celebrar ${INVITATION_CONFIG.event.label}.`;
-      const isApple = /iPad|iPhone|iPod|Mac/.test(navigator.userAgent);
+  const title = `${INVITATION_CONFIG.event.label} ${INVITATION_CONFIG.event.celebrantName}`;
+  const details = `Acompáñame a celebrar ${INVITATION_CONFIG.event.label}.`;
 
-      const formatDate = (date, withZ) => {
-        const iso = date.toISOString().replace(/[-:]/g, "").split(".")[0];
-        return withZ ? `${iso}Z` : iso;
-      };
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
-      if (isApple) {
-        const content = [
-          "BEGIN:VCALENDAR",
-          "VERSION:2.0",
-          "BEGIN:VEVENT",
-          `DTSTART:${formatDate(EVENT_DATE, true)}`,
-          `DTEND:${formatDate(EVENT_END, true)}`,
-          `SUMMARY:${title}`,
-          `DESCRIPTION:${details}`,
-          `LOCATION:${EVENT_LOCATION}`,
-          "END:VEVENT",
-          "END:VCALENDAR"
-        ].join("\n");
+  const formatDate = (date, withZ) => {
+    const iso = date.toISOString().replace(/[-:]/g, "").split(".")[0];
+    return withZ ? `${iso}Z` : iso;
+  };
 
-        const blob = new Blob([content], { type: "text/calendar" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "xv-sofia-montes.ics";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        return;
-      }
+  if (isIOS) {
+    window.location.href = "evento.ics";
+    return;
+  }
 
-      const start = formatDate(EVENT_DATE, false);
-      const end = formatDate(EVENT_END, false);
-      const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(EVENT_LOCATION)}`;
-      window.open(gcalUrl, "_blank");
-    }
+  const start = formatDate(EVENT_DATE, false);
+  const end = formatDate(EVENT_END, false);
+  const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(EVENT_LOCATION)}`;
+  window.open(gcalUrl, "_blank");
+}
 
     function initParticles() {
       const canvas = document.getElementById("particles");
