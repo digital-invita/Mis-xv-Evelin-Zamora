@@ -36,11 +36,11 @@
       --section-blur: 18px;
       /* Fondo principal */
       --bg-glow-top: rgba(190, 170, 255, 0.45);
-      --bg-glow-mid: rgba(150, 120, 255, 0.35);
+      --bg-glow-mid: rgba(130, 110, 255, 0.30);
       --bg-glow-bottom: rgba(110, 80, 255, 0.25);
 
       --bg-top: #EEE9FF;     
-      --bg-mid: #B8A4FF;     
+      --bg-mid: #A996FF;     
       --bg-bottom: #5A3FE0;  
 
       /* Colores base */
@@ -85,7 +85,7 @@
       color: var(--text);
 background:
   radial-gradient(circle at top, var(--bg-glow-top), transparent 30%),
-  radial-gradient(circle at 50% 22%, var(--bg-glow-mid), transparent 36%),
+  radial-gradient(circle at 50% 22%, var(--bg-glow-mid), transparent 30%),
   radial-gradient(circle at bottom, var(--bg-glow-bottom), transparent 28%),
   linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 48%, var(--bg-bottom) 100%);
       
@@ -114,8 +114,8 @@ background:
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+            linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.02), transparent 18%);
       background-size: 24px 24px;
       opacity: 0.14;
       pointer-events: none;
