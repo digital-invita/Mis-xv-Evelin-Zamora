@@ -98,7 +98,7 @@ background:
       touch-action: none;
     }
 
-    /* body::before {
+   body::before {
       content: "";
       position: fixed;
       inset: 0;
@@ -107,7 +107,7 @@ background:
         linear-gradient(0deg, rgba(255, 255, 255, 0.04), transparent 18%);
       pointer-events: none;
       z-index: 0;
-    } */
+    } 
 
     body::after {
       content: "";
@@ -2925,137 +2925,176 @@ background:
        Cambia aquí los textos, datos y links principales
     ================================ */
     const INVITATION_CONFIG = {
-      meta: {
-        pageTitle: "Mis XV Evelin Zamora",
-        ogTitle: "Mis XV Evelin Zamora",
-        ogDescription: "Acompáñanos a celebrar este día tan especial"
+      {
+  "meta": {
+    "pageTitle": "Mis XV Evelin Zamora",
+    "ogTitle": "Mis XV Evelin Zamora",
+    "ogDescription": "Acompáñanos a celebrar este día tan especial"
+  },
+  "event": {
+    "label": "Mis XV",
+    "celebrantName": "Evelin Zamora",
+    "eventDate": "2026-05-23T17:00",
+    "eventEnd": "2026-04-25T23:59",
+    "eventLocation": "Salón Loly - Boon",
+    "rsvpPhone": "2227781818"
+  },
+  "theme": {
+    "bgTop": "#d29bdf",
+    "bgMid": "#8a5695",
+    "bgBottom": "#592763",
+    "gold500": "#f2c06f",
+    "text": "#fffaf3",
+    "muted": "#f9e6e0",
+    "bodyFont": "Cormorant Garamond",
+    "scriptFont": "Dancing Script",
+    "displayFont": "Great Vibes"
+  },
+  "images": {
+    "hero": "FPrincipal.jpg",
+    "story": "FHistoria.png",
+    "dress": "vestimenta.png",
+    "envelope": "sobre.png",
+    "surprise": "regalo.png",
+    "gallery": [
+      "G1.jpg",
+      "G2.jpg",
+      "G3.jpg",
+      "G4.jpg",
+      "G5.jpg",
+      "G6.jpg"
+    ]
+  },
+  "story": {
+    "title": "Mi historia",
+    "paragraph1": "¡¡Este evento se hace con la finalidad de festejar mis XV contigo, acompañándome a pasar una noche súper divertida para bailar y disfrutar!!",
+    "paragraph2": "Aquí termina un capítulo lleno de recuerdos que atesoraré por siempre y comienza uno nuevo, donde la ilusión, la luz y los sueños por cumplir marcan el inicio de todo lo que está por venir.¡¡ Este evento se hace con la finalidad de festejar mis XV contigo acompañandome a pasar una noche super divertida para bailar y disfrutar!!"
+  },
+  "family": {
+    "parentsEyebrow": "En compañía de mis padres",
+    "parentsNamesHtml": "Flor Jaquelin Báez González<br>&amp;<br>Julio Cesar Zamora Benítez",
+    "parentsInviteText": "Tenemos el honor de invitarles a celebrar mis XV años.",
+    "godparentsEyebrow": "Mi madrina",
+    "godparentsNamesHtml": "Victoria Flores Rueda"
+  },
+  "ceremony": {
+    "title": "Ceremonia",
+    "time": "14:00 hrs",
+    "place": "Templo Parroquial Santa María De La Asunción",
+    "mediaMode": "icon",
+    "iconSrc": "cereminia.png",
+    "mapEmbed": "",
+    "photoSrc": "",
+    "mapLink": "https://maps.app.goo.gl/pZ6e1EkHpmAYBnzJ7"
+  },
+  "reception": {
+    "title": "Recepción",
+    "time": "15:30 hrs",
+    "place": "Salón social Loly Bon",
+    "mediaMode": "preview",
+    "iconSrc": "",
+    "mapLink": "https://maps.app.goo.gl/dnurSgPyR1HJvguZ7",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3771.4146338600935!2d-98.0392774!3d19.045499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfec9afe5869a7%3A0x89064f6d60a2af8a!2sSal%C3%B3n%20social%20Loly%20Bon!5e0!3m2!1ses-419!2smx!4v1776457832387!5m2!1ses-419!2smx",
+    "photoSrc": ""
+  },
+  "timeline": {
+    "items": [
+      {
+        "time": "14:00 hrs",
+        "title": "Ceremonia",
+        "desc": "Templo Parroquial Santa María De La Asunción."
       },
-      event: {
-        label: "Mis XV",
-        celebrantName: "Evelin Zamora",
-        eventDate: "2026-05-23T17:00:00",
-        eventEnd: "2026-04-25T23:59:59",
-        eventLocation: "Salón Loly - Boon",
-        rsvpPhone: "2227781818"
+      {
+        "time": "15:30 hrs",
+        "title": "Recepción",
+        "desc": "Salón social Loly Bon."
       },
-      theme: {
-        bgTop: "#5a132d",
-        bgMid: "#7f1f3f",
-        bgBottom: "#2a0a15",
-        gold500: "#f2c06f",
-        text: "#fffaf3",
-        muted: "#f9e6e0d1",
-        bodyFont: "Cormorant Garamond",
-        scriptFont: "Dancing Script",
-        displayFont: "Great Vibes"
+      {
+        "time": "16:00 hrs",
+        "title": "Banquete",
+        "desc": "Disfrutemos juntos de una deliciosa comida en honor a este gran día."
       },
-      images: {
-        hero: "FPrincipal.jpg",
-        story: "FHistoria.png",
-        dress: "vestimenta.png",
-        envelope: "sobre.png",
-        surprise: "regalo.png",
-        gallery: ["G1.jpg", "G2.jpg", "G3.jpg", "G4.jpg", "G5.jpg", "G6.jpg"]
+      {
+        "time": "18:00 hrs",
+        "title": "Grupo Sorpresa",
+        "desc": "Prepárate para disfrutar de un espectáculo lleno de energía y diversión."
       },
-      story: {
-        title: "Mi historia",
-        paragraph1: "¡¡Este evento se hace con la finalidad de festejar mis XV contigo, acompañándome a pasar una noche súper divertida para bailar y disfrutar!!",
-        paragraph2: "Aquí termina un capítulo lleno de recuerdos que atesoraré por siempre y comienza uno nuevo, donde la ilusión, la luz y los sueños por cumplir marcan el inicio de todo lo que está por venir.¡¡ Este evento se hace con la finalidad de festejar mis XV contigo acompañandome a pasar una noche super divertida para bailar y disfrutar!!"
-
+      {
+        "time": "20:00 hrs",
+        "title": "Baile valsístico",
+        "desc": "Presentación especial de la quinceañera junto a Elegants Dance."
       },
-      family: {
-        parentsEyebrow: "En compañía de mis padres",
-        parentsNamesHtml: "Flor Jaquelin Báez González<br>&amp;<br>✝Julio Cesar Zamora Benítez",
-        parentsInviteText: "Tenemos el honor de invitarles a celebrar mis XV años.",
-        godparentsEyebrow: "Mi madrina",
-        godparentsNamesHtml: "Victoria Flores Rueda"
+      {
+        "time": "20:30 hrs",
+        "title": "Sonido Megaboys",
+        "desc": "¡Inicia la fiesta! Música y ambiente para todos los invitados."
       },
-      ceremony: {
-        title: "Ceremonia",
-        time: "14:00 hrs",
-        place: "Templo Parroquial Santa María De La Asunción",
-        mediaMode: "icon",
-        iconSrc: "cereminia.png",
-        mapEmbed: "",
-        photoSrc: "",
-        mapLink: "https://maps.app.goo.gl/pZ6e1EkHpmAYBnzJ7"
+      {
+        "time": "21:00 hrs",
+        "title": "Partida de pastel",
+        "desc": "Momento especial para compartir el pastel y celebrar juntos."
       },
-      reception: {
-        title: "Recepción",
-        time: "15:30 hrs",
-        place: "Salón social Loly Bon",
-        mediaMode: "preview",
-        iconSrc: "",
-        mapLink: "https://maps.app.goo.gl/dnurSgPyR1HJvguZ7",
-        mapEmbed: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3771.4146338600935!2d-98.0392774!3d19.045499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfec9afe5869a7%3A0x89064f6d60a2af8a!2sSal%C3%B3n%20social%20Loly%20Bon!5e0!3m2!1ses-419!2smx!4v1776457832387!5m2!1ses-419!2smx",
-        photoSrc: ""
-      },
-      timeline: {
-        items: [
-  { time: "14:00 hrs", title: "Ceremonia", desc: "Templo Parroquial Santa María De La Asunción." },
-  { time: "15:30 hrs", title: "Recepción", desc: "Salón social Loly Bon." },       
-  { time: "16:30 hrs", title: "Sonido Megaboys", desc: "Arrancamos el ambiente con música para recibir a todos los invitados." },
-  { time: "19:00 hrs", title: "Presentación de la Quinceañera", desc: "Momento especial con brindis 🥂, colocación de corona y cambio de zapatilla." },
-  { time: "19:30 hrs", title: "Grupo Los Cuervos", desc: "Disfruta de música en vivo con todo el ambiente y energía del grupo." },
-  { time: "20:00 hrs", title: "Vals, muñeca", desc: "Presentación del tradicional vals." },
-  { time: "22:00 hrs", title: "Partida de pastel", desc: "Compartamos juntos este dulce momento especial." },
-  { time: "23:00 hrs", title: "Sonido Energy", desc: "Seguimos con la fiesta hasta el final con el mejor ambiente y música." }
-        ]
-      },
-      countdown: {
-        title: "Faltan pocos días",
-        intro: "La cuenta regresiva ha comenzado para vivir un momento inolvidable."
-      },
-      dressCode: {
-        title: "Dress Code",
-        value: "Formal",
-        note: "Lila reservado para la quinceañera."
-      },
-      gifts: {
-        title: "Opciones de regalo",
-        intro: "Tu presencia es el regalo más valioso para mí, pero si deseas tener un detalle, aquí encontrarás algunas opciones pensadas con mucho cariño.",
-        option1Title: "Lluvia de sobres",
-        option1Copy: "Si lo prefieres, podrás acompañarme con un sobre el día del evento. Será un detalle recibido con muchísimo cariño y gratitud.",
-        option2Title: "Regalo sorpresa",
-        option2Copy: "También puedes sorprenderme con un detalle especial elegido por ti. Lo importante será el cariño con el que venga.",
-        linksIntro: "Si prefieres elegir un detalle en línea, también puedes apoyarte en estas opciones de mesa de regalos:",
-        showLinks: true,
-        links: [
-          {
-            label: "Mesa de regalos Liverpool",
-            href: "https://www.liverpool.com.mx/tienda/mesa-de-regalos",
-            style: "primary"
-          },
-          {
-            label: "Celebra Palacio",
-            href: "https://www.elpalaciodehierro.com/sucursales/palacio-mitikah.html",
-            style: "secondary"
-          }
-        ]
-      },
-      rsvp: {
-        showGuestCount: true,
-        maxGuests: 6
-      },
-      sections: {
-        story: true,
-        parents: true,
-        godparents: true,
-        dress: true,
-        gifts: true,
-        agenda: true,
-        closing: true
-      },
-      closing: {
-        note: "Gracias por ser parte de este momento inolvidable"
-      },
-      brand: {
-        creditText: "Creado por Digital Invita",
-        creditHref: "https://www.facebook.com/profile.php?id=61587804296779&locale=es_LA",
-        ctaLabel: "Contáctanos",
-        ctaHref: "https://wa.me/525550591264?text=Hola%21%20Quiero%20una%20invitaci%C3%B3n%20digital%20con%20estilo%20elegante%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+      {
+        "time": "22:00 hrs",
+        "title": "Mesa de dulces y botanas",
+        "desc": "Disfruta de una variedad de antojitos durante la noche."
       }
-    };
+    ]
+  },
+  "countdown": {
+    "title": "Faltan pocos días",
+    "intro": "La cuenta regresiva ha comenzado para vivir un momento inolvidable."
+  },
+  "dressCode": {
+    "title": "Dress Code",
+    "value": "Formal",
+    "note": "Lila reservado para la quinceañera."
+  },
+  "gifts": {
+    "title": "Opciones de regalo",
+    "intro": "Tu presencia es el regalo más valioso para mí, pero si deseas tener un detalle, aquí encontrarás algunas opciones pensadas con mucho cariño.",
+    "option1Title": "Lluvia de sobres",
+    "option1Copy": "Si lo prefieres, podrás acompañarme con un sobre el día del evento. Será un detalle recibido con muchísimo cariño y gratitud.",
+    "option2Title": "Regalo sorpresa",
+    "option2Copy": "También puedes sorprenderme con un detalle especial elegido por ti. Lo importante será el cariño con el que venga.",
+    "linksIntro": "Si prefieres elegir un detalle en línea, también puedes apoyarte en estas opciones de mesa de regalos:",
+    "showLinks": true,
+    "links": [
+      {
+        "label": "Mesa de regalos Liverpool",
+        "href": "https://www.liverpool.com.mx/tienda/mesa-de-regalos",
+        "style": "primary"
+      },
+      {
+        "label": "Celebra Palacio",
+        "href": "https://www.elpalaciodehierro.com/sucursales/palacio-mitikah.html",
+        "style": "secondary"
+      }
+    ]
+  },
+  "rsvp": {
+    "showGuestCount": true,
+    "maxGuests": 6
+  },
+  "sections": {
+    "story": true,
+    "parents": true,
+    "godparents": true,
+    "dress": true,
+    "gifts": true,
+    "agenda": true,
+    "closing": true
+  },
+  "closing": {
+    "note": "Gracias por ser parte de este momento inolvidable"
+  },
+  "brand": {
+    "creditText": "Creado por Digital Invita",
+    "creditHref": "https://www.facebook.com/profile.php?id=61587804296779&locale=es_LA",
+    "ctaLabel": "Contáctanos",
+    "ctaHref": "https://wa.me/525550591264?text=Hola%21%20Quiero%20una%20invitaci%C3%B3n%20digital%20con%20estilo%20elegante%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+  }
+}
 
     let EVENT_DATE = new Date(INVITATION_CONFIG.event.eventDate);
     let EVENT_END = new Date(INVITATION_CONFIG.event.eventEnd);
