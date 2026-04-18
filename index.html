@@ -35,12 +35,13 @@
       --overlay-glass-saturate: 118%;
       --section-blur: 18px;
       /* Fondo principal */
---bg-glow-top: rgba(220, 210, 255, 0.4);
---bg-glow-mid: rgba(200, 180, 240, 0.28);
---bg-glow-bottom: rgba(240, 235, 255, 0.22);
---bg-top: #F1EAFF;
---bg-mid: #D6C7F5;
---bg-bottom: #9A88C9;
+      --bg-glow-top: rgba(210, 190, 255, 0.35);
+      --bg-glow-mid: rgba(190, 160, 255, 0.25);
+      --bg-glow-bottom: rgba(200, 170, 255, 0.15);
+
+      --bg-top: #F4EEFF;
+      --bg-mid: #D8C9FF;
+      --bg-bottom: #7B5CD6;
 
       /* Colores base */
       --wine-950: #18060d;
@@ -82,11 +83,11 @@
       min-height: 100vh;
       font-family: var(--font-body);
       color: var(--text);
-      background:
-        radial-gradient(circle at top, var(--bg-glow-top), transparent 28%),
-        radial-gradient(circle at 50% 22%, var(--bg-glow-mid), transparent 34%),
-        radial-gradient(circle at bottom, var(--bg-glow-bottom), transparent 38%),
-        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 52%, var(--bg-bottom) 100%);
+background:
+  radial-gradient(circle at top, var(--bg-glow-top), transparent 28%),
+  radial-gradient(circle at 50% 22%, var(--bg-glow-mid), transparent 34%),
+  radial-gradient(circle at bottom, var(--bg-glow-bottom), transparent 25%),
+  linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 52%, var(--bg-bottom) 100%);
       overflow-x: hidden;
     }
 
